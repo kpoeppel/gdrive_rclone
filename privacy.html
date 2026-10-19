@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Personal Google Drive Sync Client (rclone)</title>
+  <meta name="description" content="Privacy policy for a personal, single-user Google Drive API client used with rclone, including Google API Limited Use disclosures.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p class="meta">
+      Personal Google Drive Sync Client (used with rclone)<br>
+      Effective date: 2026-10-20 &middot; Last updated: 2026-10-20
+    </p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>1. Overview and scope</h2>
+    <p>
+      This Privacy Policy explains how the <strong>Personal Google Drive Sync
+      Client</strong> ("the Application", "we", "us") accesses, uses, stores,
+      shares and deletes information when it connects to Google Drive. The
+      Application is a personal, non-commercial OAuth client ID and client secret
+      used together with <a href="https://rclone.org/" rel="noopener">rclone</a>,
+      an open-source command-line file-transfer tool.
+    </p>
+    <p>
+      The Application is operated by an individual developer and is designed for
+      the developer's <strong>own, single Google Drive account</strong>. It is not
+      offered, distributed or marketed as a public service, it has no hosted
+      backend server, and it does not create user accounts. All processing takes
+      place on the user's own device, directly between that device and Google's
+      servers.
+    </p>
+    <div class="note">
+      <strong>Google API Limited Use disclosure.</strong>
+      The Application's use and transfer of information received from Google APIs
+      adheres to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
+      including the <strong>Limited Use</strong> requirements. In particular, Google
+      user data is used only to provide and improve the user-facing file-sync
+      features described in this policy.
+    </div>
+  </section>
+
+  <section>
+    <h2>2. Who is responsible (data controller)</h2>
+    <p>
+      The Application is published by an individual developer:
+    </p>
+    <ul>
+      <li><strong>Publisher:</strong> Korbinian Pöppel (individual developer)</li>
+      <li><strong>Contact:</strong> <a href="mailto:korbip@korbip.de">korbip@korbip.de</a></li>
+    </ul>
+    <p>
+      Because the Application is used solely by its publisher with the
+      publisher's own Google account, the publisher is also the only data subject
+      whose Google data is accessed. No third-party end users are served by this
+      Application.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Information the Application accesses</h2>
+    <p>
+      When you authorize the Application through Google's OAuth 2.0 flow, the
+      Application requests access to the following Google API scopes and the data
+      they cover:
+    </p>
+    <table>
+      <tr>
+        <th>Scope</th>
+        <th>What it allows</th>
+      </tr>
+      <tr>
+        <td><code>https://www.googleapis.com/auth/drive</code></td>
+        <td>Read, create, modify and delete files and folders in Google Drive, so files can be synchronized.</td>
+      </tr>
+      <tr>
+        <td><code>https://www.googleapis.com/auth/drive.metadata.readonly</code></td>
+        <td>Read file and folder metadata (names, sizes, MIME types, modification dates, IDs, parents) to compare and reconcile files.</td>
+      </tr>
+      <tr>
+        <td><code>https://www.googleapis.com/auth/docs</code></td>
+        <td>Read and write Google Docs documents where required for document synchronization/export.</td>
+      </tr>
+      <tr>
+        <td>Basic profile (<code>userinfo.email</code>, <code>openid</code>)</td>
+        <td>Identify which Google account is connected, so the correct account and quota are used.</td>
+      </tr>
+    </table>
+    <p>
+      In practice, this means the Application can access the <strong>files,
+      folders, Google Docs documents and associated metadata in the authorized
+      Google Drive account</strong>. It accesses only the account the user
+      explicitly authorizes; it does not access any other Google account.
+    </p>
+    <p>
+      The Application does <strong>not</strong> collect names, addresses, phone
+      numbers, payment information, passwords, contacts, calendars, location data,
+      or health information. It does not use cookies, advertising identifiers,
+      analytics SDKs or tracking pixels.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. How the information is used</h2>
+    <p>Google user data is used exclusively to provide the file-transfer features the user requests, specifically to:</p>
+    <ul>
+      <li>List and compare files and folders between the local device and Google Drive;</li>
+      <li>Upload, download, copy, move, rename and delete files the user selects;</li>
+      <li>Export or import Google Docs documents when configured to do so;</li>
+      <li>Verify that a transfer completed successfully and report errors to the user.</li>
+    </ul>
+    <p>
+      The Application does <strong>not</strong> use Google user data for
+      advertising, marketing, profiling, user tracking, credit-worthiness or
+      lending decisions, and does <strong>not</strong> use it to train machine
+      learning or artificial-intelligence models.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Storage of information</h2>
+    <p>
+      The Application has <strong>no server and no database</strong>. No Google
+      user data, file contents or metadata is transmitted to, copied to or stored
+      by the publisher or any third party.
+    </p>
+    <p>The only information stored is kept <strong>locally on the user's own device</strong>:</p>
+    <ul>
+      <li>
+        <strong>OAuth credentials/tokens</strong> issued by Google, stored in
+        rclone's local configuration file so the user does not have to sign in on
+        every run. These tokens are protected by the operating-system file
+        permissions of the device; where rclone's configuration encryption is
+        enabled, they are additionally encrypted with a password chosen by the
+        user.
+      </li>
+      <li>
+        <strong>rclone configuration and logs</strong>, which may contain the
+        remote name, file paths and transfer statistics. These remain on the local
+        device and may be deleted by the user at any time.
+      </li>
+      <li>
+        <strong>Files being synchronized</strong>, which are written to the local
+        destination or temporary directories chosen by the user.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Sharing and disclosure</h2>
+    <p>
+      We do <strong>not</strong> sell, rent, trade or share Google user data with
+      any third party. We do <strong>not</strong> disclose Google user data to
+      advertisers, data brokers, analytics providers or any other organization.
+    </p>
+    <p>
+      The only transfers that occur are:
+    </p>
+    <ul>
+      <li>
+        <strong>Between the user's device and Google</strong>, as required to
+        perform the requested file operations using Google's own API endpoints.
+      </li>
+      <li>
+        <strong>To storage destinations the user explicitly configures</strong>
+        (for example, a local disk, an external drive, or another remote the user
+        has already set up in rclone). The user controls those destinations.
+      </li>
+    </ul>
+    <p>
+      No human reads Google user data, and no Google user data is transferred to
+      third parties except as necessary to provide or improve the user-facing
+      features, as required for security or to comply with applicable law, or as
+      part of a merger/acquisition with prior notice to the user.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Data retention and deletion</h2>
+    <ul>
+      <li>
+        Google user data is accessed on demand and is <strong>not retained</strong>
+        by the publisher. It exists only transiently in local memory/files while a
+        transfer is running.
+      </li>
+      <li>
+        OAuth tokens remain stored locally until the user removes them. The user
+        can delete the rclone remote (for example, with <code>rclone config
+        delete &lt;remote&gt;</code>) or delete the rclone configuration file.
+      </li>
+      <li>
+        The user can revoke the Application's access to the Google account at any
+        time at
+        <a href="https://myaccount.google.com/permissions" rel="noopener">https://myaccount.google.com/permissions</a>
+        (Google Account &rarr; Security &rarr; Third-party apps &amp; services).
+        Revoking access immediately invalidates the stored tokens.
+      </li>
+      <li>
+        Files already transferred to a local or other destination are controlled
+        by the user and can be deleted by the user using normal file operations.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Legal bases and your rights (GDPR / UK GDPR)</h2>
+    <p>
+      Where the EU or UK General Data Protection Regulation applies, processing is
+      based on the user's <strong>consent</strong> (granted through Google's OAuth
+      authorization screen) and the <strong>performance of the requested
+      service</strong>. Because the publisher does not store Google user data on
+      any server, most data-subject rights are exercised directly on the user's
+      own device or through the user's Google account.
+    </p>
+    <p>Subject to applicable law, you have the right to:</p>
+    <ul>
+      <li>access the personal data processed about you;</li>
+      <li>request rectification or erasure of personal data;</li>
+      <li>restrict or object to processing;</li>
+      <li>data portability;</li>
+      <li>withdraw consent at any time (by revoking access, as described in section 7);</li>
+      <li>lodge a complaint with your local data-protection supervisory authority.</li>
+    </ul>
+    <p>
+      To exercise any of these rights, contact
+      <a href="mailto:korbip@korbip.de">korbip@korbip.de</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. California privacy rights (CCPA/CPRA)</h2>
+    <p>
+      We do not sell or share personal information as those terms are defined by
+      the California Consumer Privacy Act (as amended). California residents may
+      contact <a href="mailto:korbip@korbip.de">korbip@korbip.de</a> to exercise
+      rights of access, deletion, correction or to opt out of any sale or sharing
+      (which does not occur). We will not discriminate against you for exercising
+      these rights.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Security</h2>
+    <p>
+      The Application relies on Google's OAuth 2.0 framework and TLS/HTTPS for all
+      communications with Google. Tokens are stored locally under the operating
+      system's file-permission controls and, optionally, rclone's configuration
+      encryption. No method of transmission or storage is completely secure;
+      users are responsible for securing their own devices and for protecting any
+      client secret, token or configuration-encryption password.
+    </p>
+  </section>
+
+  <section>
+    <h2>11. Children's privacy</h2>
+    <p>
+      The Application is not directed to children under 16 (or the minimum age in
+      your jurisdiction) and is not intended for use by them. It is used only by
+      its adult developer with their own account.
+    </p>
+  </section>
+
+  <section>
+    <h2>12. International users</h2>
+    <p>
+      Google user data is processed on the user's own device and is not
+      transferred by the publisher across borders. Google processes data on its
+      own infrastructure under
+      <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>13. Third-party services</h2>
+    <p>
+      The Application is built on
+      <a href="https://rclone.org/" rel="noopener">rclone</a> and the
+      <a href="https://developers.google.com/drive" rel="noopener">Google Drive API</a>.
+      Their respective privacy policies govern their own processing. This policy
+      applies only to the Application described here.
+    </p>
+  </section>
+
+  <section>
+    <h2>14. Changes to this policy</h2>
+    <p>
+      This policy may be updated to reflect changes to the Application, legal
+      requirements or Google's policies. The "Last updated" date at the top will
+      be revised, and the current version will always be available at this URL.
+      Material changes affecting how Google user data is handled will be
+      highlighted on this page.
+    </p>
+  </section>
+
+  <section>
+    <h2>15. Contact</h2>
+    <p>
+      Questions, requests or complaints about this policy or the handling of
+      Google user data can be sent to:
+    </p>
+    <p>
+      <strong>Korbinian Pöppel</strong><br>
+      Email: <a href="mailto:korbip@korbip.de">korbip@korbip.de</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      <a href="index.html">Back to home</a> &middot;
+      Personal Google Drive Sync Client (rclone) &middot;
+      Effective 2026-10-20
+    </p>
+  </footer>
+</main>
+</body>
+</html>
