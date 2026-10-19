@@ -135,8 +135,10 @@ Then open <http://localhost:8000/>.
 
 Before pushing, update these placeholders if your details differ:
 
-- **Name / email:** `Korbinian Pöppel`, `korbip@korbip.de` (in `index.html` and
-  `privacy.html`).
+- **Publisher name:** `Korbinian Pöppel` (in `index.html` and `privacy.html`).
+- **Contact:** the public pages link to GitHub Issues. If Google requires an
+  email, use the OAuth consent screen's **User support email** field, which is
+  not displayed publicly.
 - **GitHub username / repo:** `kpoeppel` and `gdrive_rclone` in the URLs.
 - **Effective date:** `2026-10-20` in both pages.
 
